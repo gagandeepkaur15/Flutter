@@ -28,11 +28,15 @@ class _MyAppState extends State<MyApp> {
     var questions = [
       {
         'questionText': 'What\'s your favorite color?',
-        'answers': ['Black', 'White', 'Blue', 'Yellow'],
+        'answers': ['Black', 'Red', 'Green', 'White'],
       },
       {
         'questionText': 'What\'s your favorite animal?',
-        'answers': ['Dog', 'Cat', 'Lion', 'Panda'],
+        'answers': ['Rabbit', 'Snake', 'Elephant', 'Lion'],
+      },
+      {
+        'questionText': 'Who\'s your favorite instructor?',
+        'answers': ['Max', 'Max', 'Max', 'Max'],
       },
     ];
     return MaterialApp(
@@ -43,7 +47,7 @@ class _MyAppState extends State<MyApp> {
         body: Column(
           children: [
             Question(
-              questions[_questionIndex]['questionText'],
+              questions[_questionIndex]['questionText'] as String,
             ),
             ...(questions[_questionIndex]['answers'] as List<String>)
                 .map((answer) {
