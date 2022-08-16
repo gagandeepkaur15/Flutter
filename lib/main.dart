@@ -16,30 +16,30 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final questions = const [
     {
-      'questionText': 'What\'s your favorite color?',
+      'questionText': 'Find the most frequent letter: AITWIFSATCIJKTMZI',
       'answers': [
-        {'text': 'Black', 'score': 10},
-        {'text': 'Red', 'score': 5},
-        {'text': 'Green', 'score': 3},
-        {'text': 'White', 'score': 1},
+        {'text': 'A', 'score': 2},
+        {'text': 'I', 'score': 4},
+        {'text': 'J', 'score': 1},
+        {'text': 'T', 'score': 3},
       ],
     },
     {
-      'questionText': 'What\'s your favorite animal?',
+      'questionText': 'How many . can you see: ,,,.,,,.,,,,..,,,,,.,,,,',
       'answers': [
-        {'text': 'Rabbit', 'score': 3},
-        {'text': 'Snake', 'score': 11},
-        {'text': 'Elephant', 'score': 5},
-        {'text': 'Lion', 'score': 9},
+        {'text': '5', 'score': 4},
+        {'text': '6', 'score': 3},
+        {'text': '7', 'score': 2},
+        {'text': '8', 'score': 1},
       ],
     },
     {
-      'questionText': 'Who\'s your favorite instructor?',
+      'questionText': '1+1+1+1+1+1',
       'answers': [
-        {'text': 'Max', 'score': 1},
-        {'text': 'Emma', 'score': 1},
-        {'text': 'Marie', 'score': 1},
-        {'text': 'Stefan', 'score': 1},
+        {'text': '8', 'score': 2},
+        {'text': '7', 'score': 1},
+        {'text': '6', 'score': 3},
+        {'text': '5', 'score': 1},
       ],
     },
   ];
@@ -73,7 +73,16 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My First App'),
+          title: Center(
+            child: Text(
+              'Quiz',
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 43, 1, 39)),
+            ),
+          ),
+          backgroundColor: Color.fromARGB(255, 222, 131, 234),
         ),
         body: questionIndex < questions.length
             ? Quiz(

@@ -9,10 +9,13 @@ class Answer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: 200,
+      margin: EdgeInsets.all(30),
       child: RaisedButton(
-        color: Colors.blue,
-        textColor: Colors.white,
+        color: Color.fromARGB(255, 84, 16, 162),
+        textColor: Color.fromARGB(255, 255, 255, 255),
+        hoverColor: Color.fromARGB(255, 197, 135, 214),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         child: Text(answerText),
         onPressed: selectHandler,
       ),
