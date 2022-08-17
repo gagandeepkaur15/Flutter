@@ -12,9 +12,9 @@ class Answer extends StatelessWidget {
       width: 200,
       margin: EdgeInsets.all(30),
       child: RaisedButton(
-        color: Color.fromARGB(255, 84, 16, 162),
+        color: Color.fromARGB(255, 123, 15, 159),
         textColor: Color.fromARGB(255, 255, 255, 255),
-        hoverColor: Color.fromARGB(255, 197, 135, 214),
+        hoverColor: Color.fromARGB(255, 215, 132, 239),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         child: Text(answerText),
         onPressed: selectHandler,
