@@ -71,9 +71,10 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Center(
+          title: const Center(
             child: Text(
               'Quiz',
               style: TextStyle(
@@ -82,7 +83,7 @@ class _MyAppState extends State<MyApp> {
                   color: Color.fromARGB(255, 43, 1, 39)),
             ),
           ),
-          backgroundColor: Color.fromARGB(255, 222, 131, 234),
+          backgroundColor: const Color.fromARGB(255, 222, 131, 234),
         ),
         body: questionIndex < questions.length
             ? Quiz(

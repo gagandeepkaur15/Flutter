@@ -28,21 +28,23 @@ class Result extends StatelessWidget {
       children: <Widget>[
         Text(
           resultPhrase,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 36,
             fontWeight: FontWeight.bold,
           ),
           textAlign: TextAlign.center,
         ),
-        FlatButton(
-          child: Text(
+        TextButton(
+          style: ElevatedButton.styleFrom(
+            foregroundColor: const Color.fromARGB(255, 123, 15, 159),
+          ),
+          onPressed: resetHandler,
+          child: const Text(
             'Restart Quiz!',
             style: TextStyle(
               fontSize: 20,
             ),
           ),
-          textColor: Color.fromARGB(255, 181, 100, 206),
-          onPressed: resetHandler,
         ),
       ],
     ));
